@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: rgb(207, 202, 198);
+    }
+    #box{
+       max-width: 900px;
+       margin: 0 auto;
+       display: grid;
+       grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+       gap: 20px;
+
+      
+    }
+    #box1{
+        max-width: 600px;
+        padding: 20px;
+        background-color:white;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    #form{
+        box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+        border-radius: 10px;
+
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    label{
+        font-size: 15px;
+        margin-bottom: 5px;
+
+    }
+    input,
+    select,
+    textarea{
+        padding: 6px 10px;
+        border: 1px solid ;
+        border-radius: 4px;
+        font-size: 15px;
+
+    }
+    input:focus{
+        outline-color: red;
+    }
+    #apply{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    button{
+        background-color: red;
+        border: transparent 2px solid;
+        padding: 5px 10px;
+        color: beige;
+        border-radius: 8px;
+        cursor: pointer;
+        
+    }
+    buttton:hover{
+        background-color: azure;
+        color: black;
+       
+    }
+   
+
+</style>
+<body>
+    <div id="box">
+        <div id="box1">
+            <h1>Job Application (Web)</h1>                                                                                                        
+            <form action="/action.php">
+                <div id="form">
+            <div class="container">
+                <label>First name</label>
+                <input type="text" placeholder="Enter first name">
+                <label for="name">Last name</label>
+                <input id="name" type="text">
+            </div>
+           
+            <div class="container">
+                <label>Email</label>
+                <input type="email" placeholder="enter email"> 
+                <label>Job Role</label>
+                <select id="job">
+                    <option>Web development</option>
+                    <option>Backend developer</option>
+                    <option>Frontend developer</option>
+                    <option>data base</option>
+                </select>
+            </div>
+            
+            <div class="container">
+                <label> Enter Address</label>
+                <textarea id="address" row="4" cols="40"></textarea>
+            </div>
+           
+            <div class="container"><label>City</label>
+            <input type="text">
+            <label>Pin code</label>
+            <input type="text">
+        </div>
+        
+        <div class="container"><label>Start Date</label> 
+        <input type="date">
+    <label for="upload">Upload Your CV</label>
+    <input type="file" id="upload" name="upload">
+    </div>
+   
+       
+    <div id="apply">
+        <button>Apply Now</button>
+       </div>
+        </div>
+    </div>
+    </div>
+   
+</form>
+</body>
+</html>
